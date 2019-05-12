@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Page Scroll to id - jQuery plugin demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- stylesheet for demo and examples -->
+	<link rel="stylesheet" href="style.css">
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<nav id="navigation-menu">
+		<ul>
+			<li><a href="#section-1">01</a></li>
+			<li><a href="#section-2">02</a></li>
+			<li><a href="#section-3">03</a></li>
+			<li><a href="#section-4">04</a></li>
+		</ul>
+	</nav>
+	
+	<div id="content">
+		<section id="section-0">
+			<div class="content">
+				<h2 class="bg-txt">1976-2016</h2>
+				<h2 class="slogan">A GLOBAL LOOK AT</h2>	
+				<h2>SUICIDE CRISIS</h2>
+				
+				<!-- <a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
+			</div>
+		</section>
+		<section id="section-1">
+			<div class="content">
+				<h2 class="bg-txt">01</h2>
+				<h2 class="slogan">Data From Global Suicide</h2>	
+				<div class="circle-container">
+					<div class="circle circle1">
+						<h2 class="slogan">800,000</h2>
+						<p>People suicide every year</p>
+					</div>
+					<div class="circle circle2">
+						<p>Age</p>
+						<h2 class="slogan">15-29</h2>
+						<p>2nd leading cause of death</p>
+					</div>
+					<div class="circle circle3">
+						<h2 class="slogan">79%</h2>
+						<p>low & mid income</p>
+					</div>
+					<div class="circle circle4">
+						<h2 class="slogan">20%</h2>
+						<p>Self-Poisoning</p>
+					</div>
+				</div>
+				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
+			</div>
+		</section>
+		<section id="section-2">
+			<div class="content">
+				<h2 class="bg-txt">02</h2>
+				<h2 class="slogan">Who Is Commiting Suicide?</h2>
+				<p>This visualization compares suicide rates from 1976 -2016 by comparing generation, sex, GDP, and population with this Dashboard</p>
+				<img src="image/chart-1.png">
+				<p style="color:#604A6E; font-family:HurmeSemiBold; font-size:20px">Suicide and Generation Rates</p>
+				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
+			</div>
+		</section>
+		<section id="section-3">
+			<div class="content">
+				<h2 class="bg-txt">03</h2>
+				<h2 class="slogan">Closer Look at Top Countries</h2>	
+				<div class="cl-container">
+					<div class="cl cl1">
+						<h3>Region Name</h3>
+						<div class="cl-content cl-content1"><div>
+					</div>
+					<div class="cl cl2">
+						<h3>Total Number</h3>
+						<div class="cl-content cl-content2"><div>
+					</div>
+					<div class="cl cl3">
+						<h3>Female vs Male</h3>
+						<div class="cl-content cl-content3"><div>
+					</div>
+				</div>
+				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
+			</div>
+		</section>
+		<section id="section-4">
+			<div class="content">
+				<h2 class="bg-txt">04</h2>
+				<h2 class="slogan">Suicide Crisis in the U.S</h2>	
+				<img src="image/grid.svg">
+				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
+			</div>
+		</section>
+	</div>
+	
+	<footer>
+		<!-- <p>Page Scroll to id - jQuery plugin by <a href="http://manos.malihu.gr">malihu</a>. Plugin homepage: <a href="http://manos.malihu.gr/page-scroll-to-id">http://manos.malihu.gr/page-scroll-to-id</a>.</p> -->
+	</footer>
+	
+	<!-- Google CDN jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	
+	<!-- Page Scroll to id plugin -->
+	<script src="jquery.malihu.PageScroll2id.js"></script>
+	
+	<script>
+		(function($){
+			$(window).on("load",function(){
+				
+				/* Page Scroll to id fn call */
+				$("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+					highlightSelector:"#navigation-menu a"
+				});
+				
+				/* demo functions */
+				$("a[rel='next']").click(function(e){
+					e.preventDefault();
+					var to=$(this).parent().parent("section").next().attr("id");
+					$.mPageScroll2id("scrollTo",to);
+				});
+				
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>

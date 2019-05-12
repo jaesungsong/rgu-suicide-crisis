@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="459px" height="260px" viewBox="0 0 459 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="68.1987098%" y1="-132.22183%" x2="58.9036084%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#12092D" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="68.2701067%" y1="-96.2055619%" x2="50%" y2="87.1732945%" id="linearGradient-2">
+            <stop stop-color="#12092D" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="final-copy" transform="translate(-697.000000, 0.000000)">
+            <g id="Group-12" transform="translate(695.000000, -132.000000)">
+                <rect id="Rectangle-10" fill="url(#linearGradient-1)" opacity="0.310971467" transform="translate(150.000000, 193.000000) rotate(42.000000) translate(-150.000000, -193.000000) " x="93" y="33" width="114" height="320"></rect>
+                <rect id="Rectangle-10-Copy" fill="url(#linearGradient-2)" opacity="0.484318388" transform="translate(270.500000, 215.500000) rotate(42.000000) translate(-270.500000, -215.500000) " x="185" y="3" width="171" height="425"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
