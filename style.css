@@ -370,7 +370,7 @@ section h2.bg-txt {
 }
 .circle-container {
 	text-align: center;
-	margin: 80px 0;
+	margin: 80px 0 40px 0;
 }
 .circle {
 	display: inline-block;
@@ -379,6 +379,7 @@ section h2.bg-txt {
 	height: 180px;
 	border-radius: 50%;
 	margin-right: 25px;
+	margin-bottom: 25px;
 }
 .circle .slogan {
 	color: #fff;
@@ -426,14 +427,7 @@ section h2.bg-txt {
 #section-4 p {
 	color: #f2f7ec;
 }
-/*@media only screen and (min-width: 1140px){
-
-	header, .content, footer,
-	.horizontal-layout header, .horizontal-layout .content, .horizontal-layout footer,
-	.auto-layout .content{
-		padding-right: 3em;
-		padding-left: 3em;
-	}
+@media only screen and (min-width: 1140px){
 
 	.horizontal-layout header h1{
 		display: block;
@@ -462,9 +456,58 @@ section h2.bg-txt {
 		/*-moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px;*/
 	}
 
-}*/
+}
 
+select {width: 100%;}
+img {max-width: 100%; border: 1px solid #ccc;}
+ol, ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: left;
+}
+ol {padding-left: 16px;}
+ol li {margin: 10px 0;}
 
+.cl-container,
+.cl-content {
+	width: 100%;
+}
+.cl-content {
+	padding-right: 20px;
+}
+.cl-container h3 {
+	text-align: left;
+	font-family: HurmeLight;
+}
+.cl-container div{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+.cl1, .cl2 {padding-right: 20px;}
+.cl1,.cl3 {width: 35%;}
+.cl2 {width: 20%;}
+.cl-map {margin-top: 20px;}
+/* Chart.js */
+.doughnut {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+.chart-legend {
+	display: inline-block;
+	vertical-align: top;
+}
+.chart-legend ul li {
+	font-size: 10px;
+}
+.chart-legend ul li span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+}
 
 
 

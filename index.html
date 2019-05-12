@@ -80,15 +80,36 @@
 				<div class="cl-container">
 					<div class="cl cl1">
 						<h3>Region Name</h3>
-						<div class="cl-content cl-content1"><div>
+						<div class="cl-content cl-content1">
+							
+							<div class="cl-map">
+								<img src="" id="cl-map">
+							</div>
+						</div>
 					</div>
 					<div class="cl cl2">
-						<h3>Total Number</h3>
-						<div class="cl-content cl-content2"><div>
+						<div class="cl-content cl-content2">
+							<h3>Total Number</h3>
+							<div class="cl-sub-content" id="cl-total-number" css="cl-total-number">
+							</div>
+							<h3>Top 3 Ages</h3>
+							<div class="cl-sub-content" id="cl-ages" css="cl-ages">
+							</div>							
+						</div>
 					</div>
 					<div class="cl cl3">
-						<h3>Female vs Male</h3>
-						<div class="cl-content cl-content3"><div>
+						<div class="cl-content cl-content3">
+							<h3>Female vs Male</h3>
+							<div class="cl-sub-content" id="cl-gender" css="cl-gender">
+							</div>
+							<h3>Generation</h3>
+							<div class="cl-sub-content" id="cl-ages" css="cl-ages">
+								<div class="doughnut">
+									<canvas id="myChart"></canvas>
+								</div>
+								<div id="js-legend" class="chart-legend"></div>								
+							</div>							
+						<div>
 					</div>
 				</div>
 				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
@@ -114,8 +135,56 @@
 	<!-- Page Scroll to id plugin -->
 	<script src="jquery.malihu.PageScroll2id.js"></script>
 	
+	<!-- Chart -->
+	<script src="Chart.js"></script>
+	<!-- <script src="Chart.min.js"></script> -->
+	
+	
 	<script>
 		(function($){
+			var values = {
+				ru: {
+					country: 'Russia',
+					totalNumber: "995,142",
+					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					data: [12, 19, 3, 5],
+					gender: "10:1",
+					maplink: 'image/map/ru.png'
+				},
+				cn: {
+					country: 'China',
+					totalNumber: "testing",
+					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					data: [20, 30, 50, 159],
+					gender: "10:1",
+					maplink: ''
+				},				
+				us: {
+					country: 'U.S.A',
+					totalNumber: "",
+					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					data: [, , , ],
+					gender: "10:1",
+					maplink: ''
+				},	
+				ko: {
+					country: 'Korea, South',
+					totalNumber: "",
+					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					data: [, , , ],
+					gender: "10:1",
+					maplink: ''
+				},	
+				en: {
+					country: 'Great Briten',
+					totalNumber: "",
+					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					data: [, , , ],
+					gender: "10:1",
+					maplink: ''
+				}		
+			}
+			
 			$(window).on("load",function(){
 				
 				/* Page Scroll to id fn call */
@@ -129,6 +198,65 @@
 					var to=$(this).parent().parent("section").next().attr("id");
 					$.mPageScroll2id("scrollTo",to);
 				});
+				
+				var ctx = document.getElementById('myChart');
+				var myChart = new Chart(ctx, {
+				    type: 'doughnut',
+						data: {
+						    labels: ['Boomers', 'G.I. Generation', 'Generations X', 'Millenials'],
+						    datasets: [{
+						        label: '# of Votes',
+						        data: values.ru.data,
+						        backgroundColor: [
+						            'rgba(38, 44, 97, 1)',
+						            'rgba(81, 96, 177, 1)',
+												'rgba(93, 76, 108, 1)',
+												'rgba(157, 112, 175, 1)',
+						        ],
+						        borderWidth: 0
+						    }]
+						},
+						options: {
+							cutoutPercentage: 70,
+							responsive: true,
+							legend: {
+								position: 'right',
+								display: false
+							},
+							title: {
+								display: false,
+								text: 'Chart.js Doughnut Chart'
+							},
+							animation: {
+								animateScale: true,
+								animateRotate: true
+							}
+						}
+				    
+				});
+				
+				var updateChart = function(val){
+					var newVal = values[val];
+					myChart.data.datasets[0].data = newVal.data;
+					myChart.update();
+					$('#cl-total-number').text(newVal.totalNumber);
+					$('#cl-ages').html(newVal.ages);
+					$('#cl-gender').text(newVal.gender);
+					$('#cl-map').attr('src', newVal.maplink);
+				};				
+
+				var addSelect = function(){
+					var sel = $('<select>').prependTo('.cl-content1').change(function(){updateChart($(this).val())});
+					$.each(values, function(i, val) {
+						sel.append($("<option>").attr('value',i).text(this.country));
+					});
+				}; 
+				addSelect();
+
+				// custom legend display
+				document.getElementById('js-legend').innerHTML = myChart.generateLegend();
+				
+				updateChart('ru');
 				
 			});
 		})(jQuery);
