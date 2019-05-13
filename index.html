@@ -70,6 +70,11 @@
 				<h2 class="bg-txt">02</h2>
 				<h2 class="slogan">Who Is Commiting Suicide?</h2>
 				<p>This visualization compares suicide rates from 1976 -2016 by comparing generation, sex, GDP, and population with this Dashboard</p>
+				<div class="sy-box"><div class="sy-slides-wrap"><div class="sy-slides-crop"><ul id="demo1" class="sy-list">
+								<li class="sy-slide fade useCSS sy-active" style="transition-duration: 800ms; opacity: 1;"><a href="#slide1"><img src="img/image-1.jpg" alt="This is caption 1 <a href='#link'>Even with links!</a>"></a></li>
+								<li class="sy-slide fade useCSS" style="transition-duration: 800ms; opacity: 0;"><a href="#slide2"><img src="img/image-2.jpg" alt="This is caption 2"></a></li>
+								<li class="sy-slide fade useCSS" style="transition-duration: 800ms; opacity: 0;"><a href="#slide3"><img src="img/image-4.jpg" alt="And this is some very long caption for slide 3. Yes, really long."></a></li>
+							</ul></div><ul class="sy-controls"><li class="sy-prev"><a href="#prev">Previous</a></li><li class="sy-next"><a href="#next">Next</a></li></ul><div class="sy-caption-wrap"><div class="sy-caption">This is caption 1 <a href="#link">Even with links!</a></div></div><div class="sy-filler ready" style="padding-top: 39.9991%;"></div></div><ul class="sy-pager"><li class="sy-active"><a href="#1">1</a></li><li class=""><a href="#2">2</a></li><li class=""><a href="#3">3</a></li></ul></div>
 				<img src="image/chart/chart-1.png">
 				<p style="color:#604A6E; font-family:HurmeSemiBold; font-size:20px">Suicide and Generation Rates</p>
 				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
@@ -105,7 +110,7 @@
 							<div class="cl-sub-content cl-gender" id="cl-gender">
 							</div>
 							<h3>Generation</h3>
-							<div class="cl-sub-content cl-ages" id="cl-ages">
+							<div class="cl-sub-content cl-chart" id="cl-chart">
 								<div class="doughnut">
 									<canvas id="myChart"></canvas>
 								</div>
@@ -135,56 +140,58 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	
 	<!-- Page Scroll to id plugin -->
-	<script src="jquery.malihu.PageScroll2id.js"></script>
+	<script src="js/jquery.malihu.PageScroll2id.js"></script>
 	
 	<!-- Chart -->
-	<script src="Chart.js"></script>
-	<!-- <script src="Chart.min.js"></script> -->
-	
+	<script src="js/Chart.min.js"></script>
+
+	<!-- Slider -->
+	<script src="js/slippry.min.js"></script>
 	
 	<script>
 		(function($){
 			var values = {
 				ru: {
 					country: 'Russia',
-					totalNumber: '995,142',
+					totalNumber: '1,209,742',
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
-					data: [12, 19, 3, 5],
-					gender: '10:1',
+					data: [470925, 51699, 275309, 119618],
+					gender: '1:5',
 					maplink: 'image/map/ru.png'
 				},
-				cn: {
-					country: 'China',
-					totalNumber: "testing",
-					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
-					data: [20, 30, 50, 159],
-					gender: '10:1',
-					maplink: ''
-				},				
 				us: {
 					country: 'U.S.A',
-					totalNumber: '',
+					totalNumber: "1,034,013",
+
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
-					data: [, , , ],
-					gender: '10:1',
+					data: [354662, 89865, 253704, 104032],
+					gender: '1:4',
+					maplink: ''
+				},				
+				jp: {
+					country: 'Japan',
+					totalNumber: '806,902',
+					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>75+ years old</li></ol>',
+					data: [241420, 90657, 133292, 42991],
+					gender: '1:2',
 					maplink: ''
 				},	
-				ko: {
-					country: 'Korea, South',
-					totalNumber: '',
-					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
-					data: [, , , ],
-					gender: '10:1',
+				fr: {
+					country: 'France',
+					totalNumber: '329,127',
+					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>75+ years old</li></ol>',
+					data: [110173, 50767, 52831, 11291],
+					gender: '3:8',
 					maplink: ''
 				},	
-				en: {
-					country: 'Great Briten',
-					totalNumber: '',
+				uk: {
+					country: 'Ukraine',
+					totalNumber: '319,950',
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
-					data: [, , , ],
-					gender: '10:1',
+					data: [116279, 24840, 58518, 21171],
+					gender: '2:13',
 					maplink: ''
-				}		
+				}
 			}
 			
 			$(window).on("load",function(){
@@ -219,7 +226,7 @@
 						    }]
 						},
 						options: {
-							cutoutPercentage: 70,
+							cutoutPercentage: 65,
 							responsive: true,
 							legend: {
 								position: 'right',
@@ -241,10 +248,10 @@
 					var newVal = values[val];
 					myChart.data.datasets[0].data = newVal.data;
 					myChart.update();
-					$('#cl-total-number').text(newVal.totalNumber);
-					$('#cl-ages').html(newVal.ages);
-					$('#cl-gender').text(newVal.gender);
-					$('#cl-map').attr('src', newVal.maplink);
+					$('#cl-total-number').fadeOut(function(){$(this).text(newVal.totalNumber)}).fadeIn();
+					$('#cl-ages').fadeOut(function(){$(this).html(newVal.ages)}).fadeIn();
+					$('#cl-gender').fadeOut(function(){$(this).text(newVal.gender)}).fadeIn();
+					$('#cl-map').fadeOut(function(){$(this).attr('src', newVal.maplink)}).fadeIn();
 				};				
 
 				var addSelect = function(){

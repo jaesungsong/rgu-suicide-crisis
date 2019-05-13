@@ -50,7 +50,7 @@ h1, h2, h3, p{
 }
 
 h1, h2{
-	font-family: Hurme;
+	font-family: HurmeSemiBold;
 	line-height: 1em;
 	font-weight: 700;
 }
@@ -237,7 +237,7 @@ nav ul, nav ol, nav li{
 
 .auto-layout #content section{
 	position: absolute;
-	min-height: 600px;
+	min-height: 500px;
 	width: 600px;
 	top: 0;
 	left: 0;
@@ -309,7 +309,7 @@ section h2.bg-txt {
 
 #section-0 .content {
 	padding-top: 160px;
-	padding-bottom: 160px;
+	padding-bottom: 150px;
 }
 #section-0 h2 {
 	position: relative;
@@ -318,7 +318,7 @@ section h2.bg-txt {
 }
 #section-0 h2.slogan {
 	font-size: 28px;
-	font-family: HurmeSemiBold;
+	font-family: Hurme;
 	margin-bottom: -30px;
 	z-index:1;
 	color: #FEF8EC;
@@ -370,7 +370,7 @@ section h2.bg-txt {
 }
 .circle-container {
 	text-align: center;
-	margin: 80px 0 40px 0;
+	margin: 80px 0 0 0;
 }
 .circle {
 	display: inline-block;
@@ -463,10 +463,13 @@ img {max-width: 100%;}
 ol, ul {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
 	text-align: left;
 }
-ol {padding-left: 16px;}
+ul {list-style-type: none;}
+ol {
+	padding-left: 16px;
+  font-family: HurmeSemiBold;
+}
 ol li {margin: 10px 0;}
 .cl-map img {border: 1px solid #ccc;}
 .cl-container,
@@ -496,22 +499,26 @@ ol li {margin: 10px 0;}
  font-size: 52px;
  color: #120C30;	
 }
-.cl1, .cl2 {padding-right: 20px;}
-.cl1,.cl3 {width: 35%;}
-.cl2 {width: 20%;}
-.cl-map {margin-top: 20px;}
+
+.cl1, .cl2 {padding-right: 60px;}
+.cl1 {width: 340px;}
+.cl2 {width: 272px;}
+.cl3 {width: 300px;}
+.cl-map {margin-top: 40px;}
 /* Chart.js */
 .doughnut {
 	display: inline-block;
 	vertical-align: top;
-	width: 200px;
+	width: 300px;
+	margin-left: -70px;
 }
 .chart-legend {
 	display: inline-block;
 	vertical-align: top;
+	margin-left: -50px;
 }
 .chart-legend ul li {
-	font-size: 10px;
+	font-size: 12px;
 }
 .chart-legend ul li span{
 	display: inline-block;
@@ -519,10 +526,8 @@ ol li {margin: 10px 0;}
 	height: 10px;
 	margin-right: 10px;
 }
-._mPS2id-t {min-height: 600px;}
 .next{
 	bottom: 10px;
-	margin-top: 100px;
 	margin-bottom: -100px;
 }
 .next img,
@@ -531,7 +536,8 @@ ol li {margin: 10px 0;}
 	margin: 0 auto;
 	color: #fff;	
 }
-.next img {height: 100px; margin-bottom: 20px;}
+.next img {height: 80px; margin-bottom: 20px;}
+.cl-ages {margin-top:0;}
 
 
 
