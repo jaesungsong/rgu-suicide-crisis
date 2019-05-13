@@ -459,7 +459,7 @@ section h2.bg-txt {
 }
 
 select {width: 100%;}
-img {max-width: 100%; border: 1px solid #ccc;}
+img {max-width: 100%;}
 ol, ul {
 	margin: 0;
 	padding: 0;
@@ -468,7 +468,7 @@ ol, ul {
 }
 ol {padding-left: 16px;}
 ol li {margin: 10px 0;}
-
+.cl-map img {border: 1px solid #ccc;}
 .cl-container,
 .cl-content {
 	width: 100%;
@@ -479,11 +479,22 @@ ol li {margin: 10px 0;}
 .cl-container h3 {
 	text-align: left;
 	font-family: HurmeLight;
+	font-size: 20;
 }
 .cl-container div{
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
+}
+.cl-sub-content {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.cl-gender,
+.cl-total-number {
+ font-family: HurmeSemiBold;
+ font-size: 52px;
+ color: #120C30;	
 }
 .cl1, .cl2 {padding-right: 20px;}
 .cl1,.cl3 {width: 35%;}
@@ -508,7 +519,19 @@ ol li {margin: 10px 0;}
 	height: 10px;
 	margin-right: 10px;
 }
-
+._mPS2id-t {min-height: 600px;}
+.next{
+	bottom: 10px;
+	margin-top: 100px;
+	margin-bottom: -100px;
+}
+.next img,
+.next a {
+	display: block;
+	margin: 0 auto;
+	color: #fff;	
+}
+.next img {height: 100px; margin-bottom: 20px;}
 
 
 

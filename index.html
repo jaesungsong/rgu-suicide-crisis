@@ -33,8 +33,10 @@
 				<h2 class="bg-txt">1976-2016</h2>
 				<h2 class="slogan">A GLOBAL LOOK AT</h2>	
 				<h2>SUICIDE CRISIS</h2>
-				
-				<!-- <a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
+				<div class="next">
+					<img src="image/arrow-down.svg" class="next" />
+					<a href="#section-1" class="__mPS2id _mPS2id-h mPS2id-highlight mPS2id-clicked mPS2id-highlight-first" rel="next" class="next">EXPlORE</a>
+				</div>
 			</div>
 		</section>
 		<section id="section-1">
@@ -68,7 +70,7 @@
 				<h2 class="bg-txt">02</h2>
 				<h2 class="slogan">Who Is Commiting Suicide?</h2>
 				<p>This visualization compares suicide rates from 1976 -2016 by comparing generation, sex, GDP, and population with this Dashboard</p>
-				<img src="image/chart-1.png">
+				<img src="image/chart/chart-1.png">
 				<p style="color:#604A6E; font-family:HurmeSemiBold; font-size:20px">Suicide and Generation Rates</p>
 				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
 			</div>
@@ -90,20 +92,20 @@
 					<div class="cl cl2">
 						<div class="cl-content cl-content2">
 							<h3>Total Number</h3>
-							<div class="cl-sub-content" id="cl-total-number" css="cl-total-number">
+							<div class="cl-sub-content cl-total-number" id="cl-total-number">
 							</div>
 							<h3>Top 3 Ages</h3>
-							<div class="cl-sub-content" id="cl-ages" css="cl-ages">
+							<div class="cl-sub-content cl-ages" id="cl-ages">
 							</div>							
 						</div>
 					</div>
 					<div class="cl cl3">
 						<div class="cl-content cl-content3">
 							<h3>Female vs Male</h3>
-							<div class="cl-sub-content" id="cl-gender" css="cl-gender">
+							<div class="cl-sub-content cl-gender" id="cl-gender">
 							</div>
 							<h3>Generation</h3>
-							<div class="cl-sub-content" id="cl-ages" css="cl-ages">
+							<div class="cl-sub-content cl-ages" id="cl-ages">
 								<div class="doughnut">
 									<canvas id="myChart"></canvas>
 								</div>
@@ -145,42 +147,42 @@
 			var values = {
 				ru: {
 					country: 'Russia',
-					totalNumber: "995,142",
-					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					totalNumber: '995,142',
+					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [12, 19, 3, 5],
-					gender: "10:1",
+					gender: '10:1',
 					maplink: 'image/map/ru.png'
 				},
 				cn: {
 					country: 'China',
 					totalNumber: "testing",
-					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [20, 30, 50, 159],
-					gender: "10:1",
+					gender: '10:1',
 					maplink: ''
 				},				
 				us: {
 					country: 'U.S.A',
-					totalNumber: "",
-					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					totalNumber: '',
+					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [, , , ],
-					gender: "10:1",
+					gender: '10:1',
 					maplink: ''
 				},	
 				ko: {
 					country: 'Korea, South',
-					totalNumber: "",
-					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					totalNumber: '',
+					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [, , , ],
-					gender: "10:1",
+					gender: '10:1',
 					maplink: ''
 				},	
 				en: {
 					country: 'Great Briten',
-					totalNumber: "",
-					ages: ['<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>'],
+					totalNumber: '',
+					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [, , , ],
-					gender: "10:1",
+					gender: '10:1',
 					maplink: ''
 				}		
 			}
