@@ -24,7 +24,7 @@ body{
 	padding: 0;
 	border: 0;
 	font-family: Hurme;
-	font-size: 1em; 
+	font-size: 1em;
 	line-height: 1.4em;
 	/*text-shadow: 1px 1px 0 rgba(255,255,255,0.45);*/
 }
@@ -36,12 +36,12 @@ a{
 }
 
 hr{
-	display: block; 
-	height: 0; 
-	border: 0; 
-	border-top: 1px solid rgba(0,0,0,0.2); 
-	border-bottom: 1px solid rgba(255,255,255,0.2); 
-	margin: 1em 0; 
+	display: block;
+	height: 0;
+	border: 0;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	margin: 1em 0;
 	padding:0;
 }
 
@@ -79,8 +79,8 @@ header h1{
 }
 
 nav ul, nav ol, nav li{
-	list-style: none; 
-	margin: 0; 
+	list-style: none;
+	margin: 0;
 	padding: 0;
 }
 
@@ -123,7 +123,7 @@ nav ul, nav ol, nav li{
 
 #content section{
 	/*text-shadow: -1px -1px 0 rgba(0,0,0,0.65);*/
-	/*	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.3); 
+	/*	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.3);
 	box-shadow: 0 -1px 0 rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.3);*/
 	padding: 0 5em;
 	text-align: center;
@@ -137,20 +137,19 @@ nav ul, nav ol, nav li{
 	margin-right: 2em;
 }
 
-.bg-light {
-	position: absolute;
-	background: url('../image/light.svg') no-repeat;
-	/*background-size: 984px;*/
-	background-position: 63% 0;
-	width: 100%;
-	height: 100%;
-}
+.bg-light,
 .bg-skull {
 	position: absolute;
   width: 100%;
   height: 100%;
+}
+.bg-light {
+	background: url('../image/light.svg') no-repeat;
+	background-position: 72% 0;
+}
+.bg-skull {
 	background: url('../image/skull.png') no-repeat;
-	background-position: 82% 116%;
+	background-position: 94% 116%;
   background-size: 160px;
 }
 
@@ -199,12 +198,12 @@ nav ul, nav ol, nav li{
 	width: 14.285%;
 	float: left;
 	min-height: 480px;
-	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.3),-1px 0 0 rgba(0,0,0,0.6); 
+	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.3),-1px 0 0 rgba(0,0,0,0.6);
 	box-shadow: 0 -1px 0 rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.3),-1px 0 0 rgba(0,0,0,0.6);
 }
 
 .horizontal-layout #content section:nth-child(3n+2),.horizontal-layout #content section:nth-child(3n+3){
-	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.3),-1px 0 0 rgba(0,0,0,0.2),inset 1px 0 0 rgba(255,255,255,0.5); 
+	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.3),-1px 0 0 rgba(0,0,0,0.2),inset 1px 0 0 rgba(255,255,255,0.5);
 	box-shadow: 0 -1px 0 rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.3),-1px 0 0 rgba(0,0,0,0.2),inset 1px 0 0 rgba(255,255,255,0.5);
 }
 
@@ -259,7 +258,7 @@ nav ul, nav ol, nav li{
 	top: 0;
 	left: 0;
 	margin-left: 3em;
-	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2); 
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2);
 	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2);
 /*	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;*/
 }
@@ -331,7 +330,7 @@ section h2.bg-txt {
 #section-0 h2 {
 	position: relative;
 	color: #FEF8EC;
-	
+
 }
 #section-0 h2.slogan {
 	font-size: 28px;
@@ -339,7 +338,7 @@ section h2.bg-txt {
 	margin-bottom: -30px;
 	z-index:1;
 	color: #FEF8EC;
-	
+
 }
 #section-0 h2.bg-txt {
 	position: absolute;
@@ -352,35 +351,42 @@ section h2.bg-txt {
 	z-index: 0;
 }
 
+.section-0-wrapper {
+	position: relative;
+	min-width: 1140px;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
 
 #content #section-0 {
   background-color: #130F2A;
   background-image:
 	linear-gradient(
-		0deg, 
-		transparent 49%, 
-		rgba(255, 255, 255, .3) 50%, 
-		rgba(255, 255, 255, 0) 50%, 
-		transparent 100%, 
-		transparent 100%, 
-		rgba(255, 255, 255, .05) 100%, 
-		rgba(255, 255, 255, .05) 100%, 
-		transparent 100%, 
+		0deg,
+		transparent 49%,
+		rgba(255, 255, 255, .3) 50%,
+		rgba(255, 255, 255, 0) 50%,
+		transparent 100%,
+		transparent 100%,
+		rgba(255, 255, 255, .05) 100%,
+		rgba(255, 255, 255, .05) 100%,
+		transparent 100%,
 		transparent
-	), 
+	),
 	linear-gradient(
-		90deg, 
-		transparent 49%, 
-		rgba(255, 255, 255, .3) 50%, 
-		rgba(255, 255, 255, 0) 50%, 
-		transparent 100%, 
-		transparent 100%, 
-		rgba(255, 255, 255, .05) 100%, 
-		rgba(255, 255, 255, .05) 100%, 
-		transparent 77%, 
+		90deg,
+		transparent 49%,
+		rgba(255, 255, 255, .3) 50%,
+		rgba(255, 255, 255, 0) 50%,
+		transparent 100%,
+		transparent 100%,
+		rgba(255, 255, 255, .05) 100%,
+		rgba(255, 255, 255, .05) 100%,
+		transparent 77%,
 		transparent
 	);
-	
+
   height:100%;
   background-size:80px 80px;
 	min-height: 500px;
@@ -404,7 +410,7 @@ section h2.bg-txt {
 	font-family: Hurme !important;
 }
 .circle p {
-	color: #fff;	
+	color: #fff;
 	margin: 0 0 0 0;
 	padding: 4px 20px;
 }
@@ -432,7 +438,7 @@ section h2.bg-txt {
 	padding-left: 44px;
 	text-align: left;
 }
-  
+
 #section-2 {
 	background: #f7f5ff;
 }
@@ -483,7 +489,7 @@ section h2.bg-txt {
 	line-height: 1.3;
 	padding: .6em 1.4em .5em .8em;
 	width: 100%;
-	max-width: 100%; 
+	max-width: 100%;
 	box-sizing: border-box;
 	margin: 0;
 	-moz-appearance: none;
@@ -493,11 +499,8 @@ section h2.bg-txt {
 	border: unset;
 	border-radius: 0;
 	border-bottom: 1px solid #ccc;
-/*	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
-	background-repeat: no-repeat, repeat;
-	background-position: right .7em top 50%, 0 0;
-	background-size: .65em auto, 100%;*/
+	background: url('../image/arrow-down-select.svg') no-repeat;
+	background-position: 95% 16px;
 }
 .select-css::-ms-expand {
 	display: none;
@@ -509,7 +512,7 @@ section h2.bg-txt {
 	border-color: #aaa;
 	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	color: #222; 
+	color: #222;
 	outline: none;
 }
 .select-css option {
@@ -576,7 +579,7 @@ ol li {margin: 10px 0;}
 .cl-total-number {
  font-family: HurmeSemiBold;
  font-size: 52px;
- color: #120C30;	
+ color: #120C30;
 }
 
 .cl1, .cl2 {padding-right: 60px;}
@@ -613,7 +616,7 @@ ol li {margin: 10px 0;}
 .next a {
 	display: block;
 	margin: 0 auto;
-	color: #fff;	
+	color: #fff;
 }
 .next img {height: 80px; margin-bottom: 20px;}
 .cl-ages {margin-top:0;}
