@@ -584,6 +584,21 @@ ol li {margin: 10px 0;}
 .sy-pager {
 	margin-top: 60px;
 }
+.sy-pager li {
+	border-radius: unset;
+  width: 50px;
+  height: 10px;
+	margin-right: 20px;
+}
+.sy-pager li a {
+	border-radius: unset;
+}
+.sy-pager li.sy-active a {
+		background-color: #21265a;
+}
+.sy-controls li a:hover, .sy-controls li a:link, .sy-controls li a:visited {
+	display: none !important;
+}
 
 
 
