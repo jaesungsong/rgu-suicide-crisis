@@ -1,22 +1,22 @@
 @font-face {
 	font-family: HurmeLight;
-	src: url('font/HurmeLight.otf') format("opentype");
+	src: url('../font/HurmeLight.otf') format("opentype");
 }
 @font-face {
 	font-family: Hurme;
-	src: url('font/HurmeRegular.otf') format("opentype");
+	src: url('../font/HurmeRegular.otf') format("opentype");
 }
 @font-face {
 	font-family: HurmeSemiBold;
-	src: url('font/HurmeSemiBold.otf') format("opentype");
+	src: url('../font/HurmeSemiBold.otf') format("opentype");
 }
 @font-face {
 	font-family: HurmeBlack;
-	src: url('font/HurmeBlack.otf') format("opentype");
+	src: url('../font/HurmeBlack.otf') format("opentype");
 }
 @font-face {
 	font-family: HurmeBlackObl;
-	src: url('font/HurmeBlackObl.otf') format("opentype");
+	src: url('../font/HurmeBlackObl.otf') format("opentype");
 }
 
 body{
