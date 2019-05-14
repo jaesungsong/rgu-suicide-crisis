@@ -419,7 +419,6 @@ section h2.bg-txt {
 #section-2 {
 	background: #f7f5ff;
 }
-#section-2 img {width: 88%; margin-top: 30px;}
 #section-2 h2.bg-txt {color: #ebe7ff;}
 #section-4 {background: #130f2a;}
 #section-4 h2.bg-txt {color: #35314e;}
@@ -605,10 +604,10 @@ ol li {margin: 10px 0;}
 #section-4 img {max-width: 1140px; margin: 40px 0;}
 
 /* slider specific */
-.sy-box {
+/*.sy-box {
 	max-width: 1140px;
 	margin: 20px auto;
-}
+}*/
 .sy-caption-wrap {
 	width: 100%;
 	bottom: -40px;
