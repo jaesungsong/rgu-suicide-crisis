@@ -540,6 +540,28 @@ ol li {margin: 10px 0;}
 .cl-ages {margin-top:0;}
 
 
+/* slider specific */
+.sy-box {
+	max-width: 1140px;
+	margin: 20px auto;
+}
+.sy-caption-wrap {
+	width: 100%;
+	bottom: -40px;
+}
+.sy-caption-wrap .sy-caption {
+  background-color: unset;
+  color: #120C30;
+	font-family: HurmeSemiBold;
+  /*font-family: Hurme;*/
+	font-size: 28px;
+  padding: 0.4em 1em;
+  border-radius: 1.2em;
+}
+.sy-pager {
+	margin-top: 60px;
+}
+
 
 
 

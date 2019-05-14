@@ -9,12 +9,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Page Scroll to id - jQuery plugin demo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- stylesheet for demo and examples -->
-	<link rel="stylesheet" href="css/style.css">
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/slippry.min.js"></script>
+	<link rel="stylesheet" href="css/slippry.css" />
+	<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -73,7 +77,17 @@
 
 
 
-
+				<ul id="slippry">
+				  <li>
+				    <a href="#slide1"><img src="image/slide/slide-1.png" alt="Suicide and Generation Rates"></a>
+				  </li>
+				  <li>
+				    <a href="#slide2"><img src="image/slide/slide-2.png"  alt="Suicide rates by sex and population over time"></a>
+				  </li>
+				  <li>
+				    <a href="#slide3"><img src="image/slide/slide-3.png" alt="Suicide rate all over the world"></a>
+				  </li>
+				</ul>
 
 
 
@@ -271,6 +285,9 @@
 				updateChart('ru');
 				
 			});
+			
+			$('#slippry').slippry();
+
 		})(jQuery);
 	</script>
 </body>
