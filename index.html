@@ -14,10 +14,19 @@
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- FOR jquery.bgpos.js -->
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- Google CDN jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	
 	<script src="js/slippry.min.js"></script>
 	<link rel="stylesheet" href="css/slippry.css" />
 	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="js/jquery.bgpos.js"></script>
 
 </head>
 
@@ -74,9 +83,6 @@
 				<h2 class="bg-txt">02</h2>
 				<h2 class="slogan">Who Is Commiting Suicide?</h2>
 				<p>This visualization compares suicide rates from 1976 -2016 by comparing generation, sex, GDP, and population with this Dashboard</p>
-
-
-
 				<ul id="slippry">
 				  <li>
 				    <a href="#slide1"><img src="image/slide/slide-1.png" alt="Suicide and Generation Rates"></a>
@@ -88,14 +94,6 @@
 				    <a href="#slide3"><img src="image/slide/slide-3.png" alt="Suicide rate all over the world"></a>
 				  </li>
 				</ul>
-
-
-
-
-
-
-
-
 		</section>
 		<section id="section-3">
 			<div class="content">
@@ -106,8 +104,7 @@
 						<h3>Region Name</h3>
 						<div class="cl-content cl-content1">
 							
-							<div class="cl-map">
-								<img src="" id="cl-map">
+							<div class="cl-map" id="cl-map">
 							</div>
 						</div>
 					</div>
@@ -138,12 +135,13 @@
 				</div>
 				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
 			</div>
+			<!-- <img src="image/map/map-marks.png" width="984"> -->
 		</section>
 		<section id="section-4">
 			<div class="content">
 				<h2 class="bg-txt">04</h2>
 				<h2 class="slogan">Suicide Crisis in the U.S</h2>	
-				<img src="image/grid.svg">
+				<img src="image/section-4.png">
 				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
 			</div>
 		</section>
@@ -152,9 +150,6 @@
 	<footer>
 		<!-- <p>Page Scroll to id - jQuery plugin by <a href="http://manos.malihu.gr">malihu</a>. Plugin homepage: <a href="http://manos.malihu.gr/page-scroll-to-id">http://manos.malihu.gr/page-scroll-to-id</a>.</p> -->
 	</footer>
-	
-	<!-- Google CDN jQuery -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	
 	<!-- Page Scroll to id plugin -->
 	<script src="js/jquery.malihu.PageScroll2id.js"></script>
@@ -167,6 +162,7 @@
 	
 	<script>
 		(function($){
+
 			var values = {
 				ru: {
 					country: 'Russia',
@@ -174,6 +170,8 @@
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [470925, 51699, 275309, 119618],
 					gender: '1:5',
+					mappos: '-511 60',
+					mapduration: 1000,
 					maplink: 'image/map/ru.png'
 				},
 				us: {
@@ -183,6 +181,8 @@
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [354662, 89865, 253704, 104032],
 					gender: '1:4',
+					mappos: '-50 -14',
+					mapduration: 1000,
 					maplink: ''
 				},				
 				jp: {
@@ -191,6 +191,8 @@
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>75+ years old</li></ol>',
 					data: [241420, 90657, 133292, 42991],
 					gender: '1:2',
+					mappos: '-682 -20',
+					mapduration: 1000,
 					maplink: ''
 				},	
 				fr: {
@@ -199,6 +201,8 @@
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>75+ years old</li></ol>',
 					data: [110173, 50767, 52831, 11291],
 					gender: '3:8',
+					mappos: '-335 0',
+					mapduration: 1000,
 					maplink: ''
 				},	
 				uk: {
@@ -207,6 +211,8 @@
 					ages: '<ol><li>35-54 years old</li><li>55-74 years old</li><li>25-34 years old</li></ol>',
 					data: [116279, 24840, 58518, 21171],
 					gender: '2:13',
+					mappos: '-412 8',
+					mapduration: 1000,
 					maplink: ''
 				}
 			}
@@ -268,7 +274,7 @@
 					$('#cl-total-number').fadeOut(function(){$(this).text(newVal.totalNumber)}).fadeIn();
 					$('#cl-ages').fadeOut(function(){$(this).html(newVal.ages)}).fadeIn();
 					$('#cl-gender').fadeOut(function(){$(this).text(newVal.gender)}).fadeIn();
-					$('#cl-map').fadeOut(function(){$(this).attr('src', newVal.maplink)}).fadeIn();
+					$('#cl-map').stop().animate({backgroundPosition:newVal.mappos}, {duration:newVal.mapduration});
 				};				
 
 				var addSelect = function(){
@@ -286,6 +292,7 @@
 				
 			});
 			
+			// image slider
 			$('#slippry').slippry();
 
 		})(jQuery);

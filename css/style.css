@@ -472,6 +472,28 @@ ol {
 }
 ol li {margin: 10px 0;}
 .cl-map img {border: 1px solid #ccc;}
+
+#cl-map {
+	width: 340px;
+	height: 230px;
+	border: 1px solid #ccc;
+	/*background-color: gray;*/
+	background: url('../image/map/map-marks.png') no-repeat;
+	background-size: 984px;
+	/* ru */
+	/*background-position: -511px 60px;*/
+	/* us */
+	/*background-position: -50px -14px; */
+	/* fr */
+	/*background-position: -335px 0px; */
+	/* jp */
+	/*background-position: -682px -20px; */
+	/* uk */
+	/*background-position: -412px 8px */
+}
+
+
+
 .cl-container,
 .cl-content {
 	width: 100%;
@@ -539,6 +561,7 @@ ol li {margin: 10px 0;}
 .next img {height: 80px; margin-bottom: 20px;}
 .cl-ages {margin-top:0;}
 
+#section-4 img {max-width: 1140px; margin: 40px 0;}
 
 /* slider specific */
 .sy-box {
