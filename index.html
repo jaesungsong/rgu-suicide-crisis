@@ -278,7 +278,7 @@
 				};				
 
 				var addSelect = function(){
-					var sel = $('<select>').prependTo('.cl-content1').change(function(){updateChart($(this).val())});
+					var sel = $('<select>').addClass('select-css').prependTo('.cl-content1').change(function(){updateChart($(this).val())});
 					$.each(values, function(i, val) {
 						sel.append($("<option>").attr('value',i).text(this.country));
 					});
