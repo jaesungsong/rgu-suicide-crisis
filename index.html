@@ -27,9 +27,7 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script type="text/javascript" src="js/jquery.bgpos.js"></script>
-
 </head>
-
 <body>
 	<nav id="navigation-menu">
 		<ul>
@@ -39,7 +37,6 @@
 			<li><a href="#section-4">04</a></li>
 		</ul>
 	</nav>
-
 	<div id="content">
 		<section id="section-0">
 			<div class="section-0-wrapper">
@@ -79,14 +76,12 @@
 						<p>Self-Poisoning</p>
 					</div>
 				</div>
-				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
 			</div>
 		</section>
 		<section id="section-2">
 			<div class="content">
 				<h2 class="bg-txt">02</h2>
 				<h2 class="slogan">Who Is Commiting Suicide?</h2>
-				<!-- <p>This visualization compares suicide rates from 1976 -2016 by comparing generation, sex, GDP, and population with this Dashboard</p> -->
 				<ul id="slippry">
 				  <li>
 				    <a href="#slide1"><img src="image/slide/slide-1.png" alt="Suicide and Generation Rates"></a>
@@ -107,7 +102,6 @@
 					<div class="cl cl1">
 						<h3>Region Name</h3>
 						<div class="cl-content cl-content1">
-
 							<div class="cl-map" id="cl-map">
 							</div>
 						</div>
@@ -137,23 +131,16 @@
 						<div>
 					</div>
 				</div>
-				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
 			</div>
-			<!-- <img src="image/map/map-marks.png" width="984"> -->
 		</section>
 		<section id="section-4">
 			<div class="content">
 				<h2 class="bg-txt">04</h2>
 				<h2 class="slogan">Suicide Crisis in the U.S</h2>
 				<img src="image/section-4.png">
-				<!-- <hr /><a href="#top">&uarr; Back to top</a> <a href="#" rel="next">&darr; Next section</a> -->
 			</div>
 		</section>
 	</div>
-
-	<footer>
-		<!-- <p>Page Scroll to id - jQuery plugin by <a href="http://manos.malihu.gr">malihu</a>. Plugin homepage: <a href="http://manos.malihu.gr/page-scroll-to-id">http://manos.malihu.gr/page-scroll-to-id</a>.</p> -->
-	</footer>
 
 	<!-- Page Scroll to id plugin -->
 	<script src="js/jquery.malihu.PageScroll2id.js"></script>
@@ -166,7 +153,6 @@
 
 	<script>
 		(function($){
-
 			var values = {
 				ru: {
 					country: 'Russia',
@@ -222,19 +208,12 @@
 			}
 
 			$(window).on("load",function(){
-
 				/* Page Scroll to id fn call */
 				$("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
 					highlightSelector:"#navigation-menu a"
 				});
 
-				/* demo functions */
-				$("a[rel='next']").click(function(e){
-					e.preventDefault();
-					var to=$(this).parent().parent("section").next().attr("id");
-					$.mPageScroll2id("scrollTo",to);
-				});
-
+				/* Doughnut chart initializing */
 				var ctx = document.getElementById('myChart');
 				var myChart = new Chart(ctx, {
 				    type: 'doughnut',
@@ -268,7 +247,6 @@
 								animateRotate: true
 							}
 						}
-
 				});
 
 				var updateChart = function(val){
@@ -289,14 +267,15 @@
 				};
 				addSelect();
 
-				// custom legend display
+				// custom legend display for the doughnut chart
 				document.getElementById('js-legend').innerHTML = myChart.generateLegend();
 
+				// initial country set when page loaded
 				updateChart('ru');
 
 			});
 
-			// image slider
+			// Initializing image slider
 			$('#slippry').slippry();
 
 		})(jQuery);
